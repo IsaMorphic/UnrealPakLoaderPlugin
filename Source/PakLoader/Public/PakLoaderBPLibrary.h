@@ -15,23 +15,7 @@ class PAKLOADER_API UPakLoaderBPLibrary : public UBlueprintFunctionLibrary
 
 public:
 
-	FPakPlatformFile* PakPlatform;
-
-	static bool InitLoaderPakPlatformFile(class FPakPlatformFile* PakPlatform);
-
 	UFUNCTION(BlueprintCallable)
-		static void TryLoadingAssetFromPath(FString Path);
-
-	UFUNCTION(BlueprintCallable)
-		static void RunLoadingTestOnPakFile(FString PakFilePath);
-
-	UFUNCTION(BlueprintCallable)
-		static bool HasPakFileAlreadyBeenLoaded(FString PakFilePath);
-
-	static void TestPakFileIterationAndLoading(FString PakFilePath, FString PakMountDirectory);
-
-	static bool LoadPakFileAndAddToRegistry(class FPakPlatformFile* PakPlatform, FString PakFilePath, FString PakMountDirectory);
-
-	static class FPakPlatformFile* LoadPakFileAndAddToRegistry(FString PakFilePath, FString PakMountDirectory);
+		static bool LoadPakFileAndAddToRegistry(FString PakFilePath, FString PakMountDirectory);
 
 };
